@@ -190,6 +190,7 @@ if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang" OR
       set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-unused-local-typedefs")
     endif()
   endif()
+  SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath,'$ORIGIN/../lib'")
 elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
   add_definitions(/we4800)
 
